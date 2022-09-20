@@ -1,13 +1,21 @@
-import { Schema, model } from "mongoose";
-
+import mongoose from "mongoose";
+const {Schema, model} = mongoose
 const urlSchema = new Schema({
     url: {
         type: String,
-        require: true,
+        required: true,
+        trim: true,
     },
     shortUrl: {
         type: String,
-        require: true
+        required: true,
+        unique: true,
+    },
+    uid : {
+        type: Schema.Types.ObjectId,
+        ref: "user",
+        required: true,
+
     }
 });
 
