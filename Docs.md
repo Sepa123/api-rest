@@ -50,3 +50,76 @@
 ```
 
 ## Urls
+
+### Obtener urls de un usuario
+
+```http
+  GET https://apii.onrender.com/api/v1/urls
+```
+
+#### Autentificación 
+
+requiere de un usuario que haya iniciado sesión previamente
+con un token de verificación 
+
+| Parameter    | Type     | Description                |
+| :--------    | :------- | :------------------------- |
+| `token`      | `string` | **Required**. 
+
+#### 
+
+#### Response
+200
+```json
+{
+  "urls": [
+    {
+      "_id": "632370d10da4a89b92e7b17e",
+      "url": "https://stackoverflow.com/questions/19480008/javascript-merging-objects-by-id",
+      "shortUrl": "jMBLc-",
+      "uid": "63236c81c62c9ed57ac59c52",
+      "__v": 0
+    },
+    {
+      "_id": "632370d70da4a89b92e7b180",
+      "url": "https://www.youtube.com/watch?v=VrLvbzHVT9A&t=19545s",
+      "shortUrl": "jlYwRw",
+      "uid": "63236c81c62c9ed57ac59c52",
+      "__v": 0
+    } 
+  ]
+}
+```
+
+### Obtener una url de un usuario por su id
+
+```http
+  GET https://apii.onrender.com/api/v1/urls/{_id}
+```
+
+#### Autentificación 
+
+requiere de un usuario que haya iniciado sesión previamente
+con un token de verificación 
+
+| Parameter   | Type     | Description                |
+| :--------   | :------- | :------------------------- |
+| `token`     | `string` | **Required**. 
+| `_id`       | `string` | **Required**. id de la url 
+#### 
+
+#### Response
+200
+```json
+{
+  "urls": [
+    {
+      "_id": "632370d10da4a89b92e7b17e",
+      "url": "https://stackoverflow.com/questions/19480008/javascript-merging-objects-by-id",
+      "shortUrl": "jMBLc-",
+      "uid": "63236c81c62c9ed57ac59c52",
+      "__v": 0
+    } 
+  ]
+}
+```
