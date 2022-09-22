@@ -10,8 +10,8 @@ import redirectRouter from "./routes/redirect.router.js"
 
 const app = express();
 
-//TODO: Configurar CORS
-const whiteList = [process.env.ORIGIN1, process.env.ORIGIN2];
+
+const whiteList = [process.env.ORIGIN1];
 
 app.use(
     cors({
