@@ -106,7 +106,6 @@ con un token de verificación
 | :--------   | :------- | :------------------------- |
 | `token`     | `string` | **Required**. 
 | `_id`       | `string` | **Required**. id de la url 
-#### 
 
 #### Response
 200
@@ -121,5 +120,36 @@ con un token de verificación
       "__v": 0
     } 
   ]
+}
+```
+### Crear un shortUrl
+
+```http
+  POST https://apii.onrender.com/api/v1/urls
+```
+
+#### Autentificación 
+
+requiere de un usuario que haya iniciado sesión previamente
+con un token de verificación 
+
+| Parameter    | Type     | Description                |
+| :--------    | :------- | :------------------------- |
+| `token`      | `string` | **Required**. 
+
+#### Require body
+
+```json
+{
+  "url": "https://www.youtube.com/watch?v=VrLvbzHVT9A&t=19545s"
+}
+```
+
+#### Response
+201
+
+```json
+{
+  "url": "https://www.youtube.com/watch?v=VrLvbzHVT9A&t=19545s"
 }
 ```
